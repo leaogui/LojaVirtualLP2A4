@@ -3,7 +3,7 @@
     
    <%
    
-	String log = (String)session.getAttribute("sessao");
+	String log = (String)session.getAttribute("admin");
     
 	if(log == null){
 		
