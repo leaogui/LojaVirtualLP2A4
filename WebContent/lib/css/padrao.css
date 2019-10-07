@@ -1,0 +1,13 @@
+.bgred {background: #d9534f;}
+.tt_menu {color:#D9534F;margin-bottom:20px; }
+.corrigir {margin-top: -30px !important;}
+.btn{
+	background-color: lightblue;
+	color: green;
+}
+
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	background-color : pink;
+	color: green;
+}
