@@ -12,7 +12,7 @@
 		
 		%>
 		<script>
-			alert("Administrador Não Encontrado");
+			alert("Administrador não encontrado");
 			location="login.jsp";
 		</script>
 <%

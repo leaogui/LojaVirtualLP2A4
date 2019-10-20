@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="../lib/js/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="lib/js/funcs.js"></script>
     <link href="lib/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="lib/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="lib/css/padrao.css" rel="stylesheet" type="text/css">
@@ -59,7 +60,6 @@
                 <div class="col-sm-offset-2 col-sm-10">
                 <input type= "hidden" name="formulario" value = "login">
                   <button type="submit" class="btn btn-danger" value = "submit">Login</button>
-                  <button href="cadastroAdm.jsp">Cadastrar Adm</button>
                 </div>
               </div>
             </form>
