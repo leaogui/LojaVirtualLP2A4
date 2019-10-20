@@ -13,7 +13,10 @@
     <link href="lib/css/padrao.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <% if (AdminRepo.getAdmins().size() == 0){
+
+  <% 
+  
+  if (AdminRepo.getAdmins().size() == 0){
 	%>
 		<script>
 			alert("Administrador não cadastrado.");
