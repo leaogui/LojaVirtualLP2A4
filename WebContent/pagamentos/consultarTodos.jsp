@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import = "javax.persistence.EntityManager, javax.persistence.EntityManagerFactory, javax.persistence.Persistence, javax.persistence.TypedQuery, entidades.Pagamento, java.util.List" %>    
     <!DOCTYPE html>
 <html><head>
     <meta charset="utf-8">
@@ -24,25 +25,40 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3 class="tt_menu">&gt;&gt; PAGAMENTOS - CONSULTAR PAGAMENTOS &lt;&lt;</h3>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <form class="form-horizontal" role="form" type="submit" name = "form">
-              <div class="form-group">
-                <input type= "hidden" name="formulario" value = "conp">
-              </div>
-              <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-danger">Consultar</button>
+            <%
+	            			EntityManagerFactory emf = Persistence.createEntityManagerFactory("loja");
+	            			EntityManager em = emf.createEntityManager();
+	            			
+	            			TypedQuery<Pagamento> query = em.createQuery("select p from Pagamento p", Pagamento.class); 
+	            			
+	            			List<Pagamento> pagamentos = query.getResultList();
+	            			
+	            			if (pagamentos.size() == 0){
+	            				
+	            				
+	            		%>	
+	            			<p>Não existe nenhum pagamento.</p><br><br><br>		
+	            		<%
+	            		
+	            			}
+	            			
+	            			else
+	            			{
+	            				
+	            				for (Pagamento p : pagamentos){
+	            		%>	
+	            					<p><%=p.toString()%></p><br><br>
+	            					
+	            		<%
+	            			}
+	            		}
+	            		%>
+
                 </div>
               </div>
-            </form>
+ 
           </div>
         </div>
-      </div>
-    </div>
     <footer>
       <div class="navbar navbar-fixed-bottom bgred">
         <div class="container">
