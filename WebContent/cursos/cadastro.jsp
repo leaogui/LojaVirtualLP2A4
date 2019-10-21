@@ -30,7 +30,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" id="form" name="form" method="post" action="../Controlador">
               <div class="form-group">
                 <div class="col-sm-2">
                   <label for="inputCURSO" class="control-label">Informar o CURSO:</label>

@@ -1,10 +1,6 @@
 <%@page import="repo.AdminRepo, entidades.Admin" %>
 
 
-
-
-
-
 <%
 	String login = request.getParameter("login");
 	String senha = request.getParameter("senha");

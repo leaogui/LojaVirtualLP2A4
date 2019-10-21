@@ -34,6 +34,8 @@ public class Controlador extends HttpServlet {
 		
 		if(tipo.equals("addc")) {
 			
+			System.out.println("foi");
+			
 			String nome = request.getParameter("inputNome");
 			String email = request.getParameter("inputEMAIL");
 			String cpf = request.getParameter("inputEmail3");
@@ -394,7 +396,10 @@ public class Controlador extends HttpServlet {
 				
 			}
 		}
-				
+		
+		em.close();
+		emf.close();
+		
 	}
 
 

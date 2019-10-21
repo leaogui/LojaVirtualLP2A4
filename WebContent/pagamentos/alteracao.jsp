@@ -30,7 +30,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <form class="form-horizontal" role="form" name="form" onsubmit="validar(document.form.cpf.value, document.form.email.value)">
+            <form class="form-horizontal" role="form" id="form" name="form" method="post" action="../Controlador">
               <div class="form-group">
                 <div class="col-sm-3">
                   <label for="inputCPF" class="control-label">Informar o CPF:</label>

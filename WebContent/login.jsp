@@ -42,7 +42,7 @@
             <form class="form-horizontal" role="form" type="submit" action = "autenticacao.jsp" method = "post">
               <div class="form-group">
                 <div class="col-sm-2">
-                  <label for="inputEmail3" class="control-label">Informar o CPF:</label>
+                  <label for="inputEmail3" class="control-label">Informar o login:</label>
                 </div>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputEmail3" name = "inputEmail3" required>

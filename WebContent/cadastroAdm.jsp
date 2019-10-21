@@ -31,7 +31,7 @@
             <form class="form-horizontal" role="form" id="form" name="form" method="post" action="validacaoAdm.jsp">
               <div class="form-group">
                 <div class="col-sm-2">
-                  <label for="inputEmail3" class="control-label">Informe o CPF:</label>
+                  <label for="inputEmail3" class="control-label">Informe o login:</label>
                 </div>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="login" placeholder="Login" name="login" required="true">
