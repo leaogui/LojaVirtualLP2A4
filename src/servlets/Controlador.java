@@ -31,14 +31,6 @@ public class Controlador extends HttpServlet {
 		
 		String tipo = request.getParameter("formulario");
 		
-//		if(tipo.equals("login")) {
-			
-			
-//			session = request.getParameter("inputEmail3");
-//			String senha = request.getParameter("senha");	
-			
-			
-//		}
 		
 		if(tipo.equals("addc")) {
 			
