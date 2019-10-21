@@ -46,11 +46,12 @@
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="inputCURSO" placeholder="CURSO">
                   <input type= "hidden" name="formulario" value = "remop">
+                  <input type="hidden" name="valCPF" value="">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
-                  <button type="submit" class="btn btn-danger">Excluir</button>
+                  <button type="button" class="btn btn-danger" onclick="validacaocpf(document.form.cpf.value, document.form, document.form.valCPF)">Excluir</button>
                 </div>
               </div>
             </form>

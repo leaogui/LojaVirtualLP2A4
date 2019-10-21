@@ -25,6 +25,8 @@ public class Controlador extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		String valCPF = request.getParameter("valCPF");
+		String valEmail = request.getParameter("valEmail");
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("loja");
 		EntityManager em = emf.createEntityManager();
 		
@@ -36,6 +38,7 @@ public class Controlador extends HttpServlet {
 			
 			System.out.println("foi");
 			
+			if (valCPF.equals("true") && valEmail.equals("true")) {
 			String nome = request.getParameter("inputNome");
 			String email = request.getParameter("inputEMAIL");
 			String cpf = request.getParameter("inputEmail3");
@@ -47,10 +50,16 @@ public class Controlador extends HttpServlet {
 			em.getTransaction().commit();
 			
 			response.sendRedirect("index.jsp");
+			}else {
+				if (valCPF.equals("false") && valEmail.equals("false")) {
+					response.sendRedirect("/ProjetoWEB/clientes/cadastro.jsp");
+				}
+			}
 		}
 		
 		if(tipo.equals("altc")) {
-			
+		
+		if (valCPF.equals("true") && valEmail.equals("true")) {	
 		String nome = request.getParameter("inputNome");
 		String email = request.getParameter("inputEMAIL");
 		String cpf = request.getParameter("inputEmail3");
@@ -81,10 +90,20 @@ public class Controlador extends HttpServlet {
 		
 		response.sendRedirect("index.jsp");
 		}
+		}
+		else {
+			if (valCPF.equals("false") && valEmail.equals("false")) {
+				response.sendRedirect("/ProjetoWEB/clientes/alteracao.jsp");
+			}
+		}
+		
+		
 		
 		}
 		
 		if(tipo.equals("remoc")) {
+			
+		if (valCPF.equals("true")) {	
 			
 		String cpf = request.getParameter("inputEmail3");
 		
@@ -112,9 +131,18 @@ public class Controlador extends HttpServlet {
 		}
 		
 		}
+		else {
+			if (valCPF.equals("false")) {
+				response.sendRedirect("/ProjetoWEB/clientes/exclusao.jsp");
+			}
+		}
+		
+		}
 		
 		
 		if(tipo.equals("conc")) {
+			
+			if (valCPF.equals("true")) {	
 			
 			String cpf = request.getParameter("inputEmail3");
 			
@@ -145,6 +173,13 @@ public class Controlador extends HttpServlet {
 				out.println("</script>");
 				out.close();
 				
+			}
+			
+			}
+			else {
+				if (valCPF.equals("false")) {
+					response.sendRedirect("/ProjetoWEB/clientes/consulta.jsp");
+				}
 			}
 			
 		}
@@ -280,6 +315,8 @@ public class Controlador extends HttpServlet {
 		
 		if(tipo.equals("altp")) {
 			
+			if (valCPF.equals("true")) {
+			
 			String cpf = request.getParameter("inputEmail3");
 			String curso = request.getParameter("inputCURSO");
 			String data_insc = request.getParameter("inputDATA");
@@ -313,11 +350,17 @@ public class Controlador extends HttpServlet {
 			
 			}
 			
+			} else {
+				if (valCPF.equals("false"))
+					response.sendRedirect("/ProjetoWEB/pagamentos/alteracao.jsp");
+			}
 			
 		}
 		
 		
 		if(tipo.equals("addp")) {
+			
+			if (valCPF.equals("true")) {
 			
 			String cpf = request.getParameter("inputEmail3");
 			String curso = request.getParameter("inputCURSO");
@@ -331,11 +374,18 @@ public class Controlador extends HttpServlet {
 			
 			response.sendRedirect("index.jsp");
 			
+			} else {
+				if (valCPF.equals("false"))
+					response.sendRedirect("/ProjetoWEB/pagamentos/cadastro.jsp");
+			}
+			
 			
 		}
 		
 		
 		if(tipo.equals("remop")) {
+			
+			if (valCPF.equals("true")) {
 			
 			String cpf = request.getParameter("inputEmail3");
 			
@@ -362,11 +412,17 @@ public class Controlador extends HttpServlet {
 			response.sendRedirect("index.jsp");
 			}
 			
+			} else {
+				if (valCPF.equals("false"))
+					response.sendRedirect("/ProjetoWEB/pagamentos/exclusao.jsp");
+			}
 			
 		}
 		
 		
 		if(tipo.equals("conp")) {
+			
+			if (valCPF.equals("true")) {
 			
 			String cpf = request.getParameter("inputEmail3");
 			
@@ -394,6 +450,11 @@ public class Controlador extends HttpServlet {
 				out.println("</script>");
 				out.close();
 				
+			}
+			
+			} else {
+				if (valCPF.equals("false"))
+					response.sendRedirect("/ProjetoWEB/pagamentos/consulta.jsp");
 			}
 		}
 		

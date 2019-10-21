@@ -54,11 +54,13 @@
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputEMAIL" id="email" name="email" placeholder="E-mail">
                   <input type= "hidden" name="formulario" value = "altc">
+                  <input type="hidden" name="valCPF" value="">
+                  <input type="hidden" name="valEmail" value="">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                  <button type="submit" class="btn btn-danger">Alterar</button>
+                  <button type="submit" class="btn btn-danger" onclick="validar(document.form.cpf.value, document.form.email.value, document.form, document.form.valCPF, document.form.valEmail)">Alterar</button>
                 </div>
               </div>
             </form>

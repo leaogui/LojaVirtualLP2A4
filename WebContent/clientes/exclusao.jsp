@@ -37,12 +37,14 @@
                 </div>
                 <div class="col-sm-9">
                  <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF" title="Digite um CPF no formato: xxx.xxx.xxx-xx" required="" >
-				<input type= "hidden" name="formulario" value = "remoc">                
+				<input type= "hidden" name="formulario" value = "remoc">
+				<input type="hidden" name="valCPF" value="">
+                <input type="hidden" name="valEmail" value="">                
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
-                  <button type="submit" class="btn btn-danger">Consultar</button>
+                  <button type="submit" class="btn btn-danger" onclick="validar(document.form.cpf.value, document.form.email.value, document.form, document.form.valCPF, document.form.valEmail)">Consultar</button>
                 </div>
               </div>
             </form>

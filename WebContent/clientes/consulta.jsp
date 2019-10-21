@@ -39,10 +39,12 @@
                                     <input type="text" class="form-control" name="cpf" id="cpf" placeholder="CPF" title="Digite um CPF no formato: xxx.xxx.xxx-xx" required="" >
                                 </div>
                                 <input type= "hidden" name="formulario" value = "conc">
+                                <input type="hidden" name="valCPF" value="">
+                  				<input type="hidden" name="valEmail" value="">
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-offset-2 col-sm-10">
-                                    <button type="submit" class="btn btn-danger">Consultar</button>
+                                    <button type="submit" class="btn btn-danger" onclick="validar(document.form.cpf.value, document.form.email.value, document.form, document.form.valCPF, document.form.valEmail)">Consultar</button>
                                 </div>
                             </div>
                         </form>

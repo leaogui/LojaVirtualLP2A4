@@ -54,11 +54,12 @@
                 <div class="col-sm-9">
                   <input type="date" class="form-control" id="inputDATA" title="Preencha o campo Nome" required="">
                   <input type= "hidden" name="formulario" value = "altp">
+                  <input type="hidden" name="valCPF" value="">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-10">
-                  <button type="submit" class="btn btn-danger">Alterar</button>
+                  <button type="button" class="btn btn-danger" onclick="validacaocpf(document.form.cpf.value, document.form, document.form.valCPF)">Alterar</button>
                 </div>
               </div>
             </form>
